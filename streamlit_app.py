@@ -18,9 +18,8 @@ launch = st.button("Rechercher les entreprises")
 
 if launch:
     with st.spinner("Chargement des données..."):
-        url = "https://raw.githubusercontent.com/charlesdedampierre/datasets/main/sirene_sample.csv"
-        response = requests.get(url)
-        df = pd.read_csv(io.StringIO(response.content.decode('utf-8')), dtype=str)
+        df = pd.read_csv("sirene_light.csv", dtype=str)
+
 
         naf_list = [n.strip() for n in naf_input.upper().split(",")]
         df_filtered = df[
