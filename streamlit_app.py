@@ -9,10 +9,10 @@ st.set_page_config(page_title="Annuaire sécurisé", layout="centered")
 st.title("🔐 Connexion")
 code = st.text_input("Entre le mot de passe :", type="password")
 
-if code == "invite":
+if code == "invite2025":
     st.success("🔍 Accès invité activé")
     profil = "invite"
-elif code == "admin123":
+elif code == "admin220":
     st.success("👑 Accès admin activé")
     profil = "admin"
 else:
