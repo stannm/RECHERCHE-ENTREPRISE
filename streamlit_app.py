@@ -1,4 +1,23 @@
 import streamlit as st
+
+# AUTHENTIFICATION SIMPLE
+st.title("🔐 Connexion")
+
+code = st.text_input("Entre le mot de passe :", type="password")
+
+if code == "invite":
+    st.success("🔍 Accès invité : recherche activée")
+    profil = "invite"
+
+elif code == "admin123":
+    st.success("👑 Accès admin activé")
+    profil = "admin"
+
+else:
+    st.warning("🔒 Code incorrect ou vide")
+    st.stop()
+
+import streamlit as st
 import pandas as pd
 import io
 import requests
