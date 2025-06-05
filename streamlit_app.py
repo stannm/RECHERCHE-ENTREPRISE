@@ -8,7 +8,7 @@ import hashlib
 st.set_page_config(page_title="Annuaire Ultra Complet", layout="wide")
 
 # ---- CONFIG ----
-PASSWORDS = {"invite": "invite", "admin": "admin123"}
+PASSWORDS = {"invite": "sadelainvite2025", "admin": "admin220cv"}
 EXPORT_CODE = "export2024"
 
 # ---- AUTHENTIFICATION ----
