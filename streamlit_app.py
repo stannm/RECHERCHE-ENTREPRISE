@@ -1,28 +1,24 @@
 import streamlit as st
 import pandas as pd
+import io
+import requests
+import zipfile
 
-# CONFIG
-st.set_page_config(page_title="Annuaire sécurisé", layout="centered")
+st.set_page_config(page_title="Recherche d'entreprises", layout="centered")
+
+# bloc sécurité juste après
 st.title("🔐 Connexion")
-
-# Saisie du mot de passe
 code = st.text_input("Entre le mot de passe :", type="password")
-
-# Vérification simple
-if code == "invite":
-    st.success("🔍 Accès invité activé")
-    profil = "invite"
-
-elif code == "admin123":
-    st.success("👑 Accès admin activé")
+if code == "admin123":
+    st.success("Accès admin activé")
     profil = "admin"
-
+elif code == "invite":
+    st.success("Accès invité activé")
+    profil = "invite"
 else:
     st.warning("🔒 Mot de passe incorrect ou vide")
-    st.stop()  # ← bloque tout le reste si pas bon
+    st.stop()
 
-# 👉 LE RESTE DE L’APP VA ICI (filtrage, affichage, etc.)
-# car maintenant on est sûr que la personne est connectée
 import streamlit as st
 import pandas as pd
 import io
